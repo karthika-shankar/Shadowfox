@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Karthika Shankar" content="PORFOLIO">
+    <title>Portfolio</title>
+    <link rel="icon" href="top-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="img/profilepic1.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="header-text">
+                <p>CSE Student</p>
+                <h1>Hi, I'm <span>Karthika Shankar</span></h1>
+                <div class="action-items">
+                    <a class="social-icon" href="https://github.com/karthika-shankar" target="_blank">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                    <a class="social-icon" href="www.linkedin.com/in/karthika-shankar" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                    <a class="download-cv" href="https://drive.google.com/file/d/17C3cKjeJW8swAuoMuyEBurzLaGG8RTq7/view?usp=drive_link" target="_blank">Download CV</a>
+                </div>
+            </div>
+            
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Grey Rectangle -->
+                <div class="about-col-1">
+                    <div class="grey-rectangle"></div>
+                </div>
+                <!-- Column 2: About Me Section -->
+                <div class="about-col-2">
+                    <h2>About Me</h2>
+                    <p>A dedicated Computer Science Engineering student with a strong passion for software development, artificial intelligence, and emerging technologies. Focused on building efficient, user-centered solutions through a blend of technical knowledge and creative problem-solving. Eager to contribute to innovative projects, continuously learn new skills, and grow within dynamic, forward-thinking environments. Also interested in developing strong professional networks and communication skills to support collaborative success.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab "id="skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>C C++ Java Python React</li>
+                            <li><span>Databases</span><br>MySQL Supabase</li>
+                            <li><span>Developer Tools</span><br>VS Code PyCharm</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>May 2024-Jun 2024</span><br>Techgentsia-AI/ML Intern<br>Contributed to AI/ML Team</li>
+                            <li><span>Apr 2025-Present</span><br>Shadowfox-Web Development Intern<br>Developing and improving web applications using modern web technologies.</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents "id="education">
+                        <ul>
+                            <li><span>School of Engineering,CUSAT</span><br>Nov 2022 - Jun 2026<br>B.Tech Computer Science Engineering GPA: 9.38</li>
+                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education XII (CBSE): 90.6%</li>
+                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education X (CBSE):   97.8%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="contact-section">
+        <h2 class="contact-heading">Contact Me</h2>
+        <div class="contact-box">
+            <div class="contact-info">
+                <p><ion-icon name="paper-plane-sharp"></ion-icon> karthikashankar@gmail.com</p>
+                
+                <p><ion-icon name="call"></ion-icon> +91 8921618050</p>
+                <p><ion-icon name="location"></ion-icon> Kochi, Kerala, India</p>
+                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            </div>
+
+            <form class="contact-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+      
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
