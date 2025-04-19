@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #000; /* Black background for contrast */
-    color: whitesmoke; /* Light text color for readability */
+    background-color: #000; /* Keeping black background for contrast */
+    color: #EEEEEE; /* Softer off-white for better readability */
 }
 
 .container {
@@ -41,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: whitesmoke; /* Light text color for navigation links */
+    color: #EEEEEE; /* Softer off-white for text */
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -53,7 +53,7 @@ nav ul li a::after {
     height: 3px;
     left: 0;
     bottom: -6px;
-    background-color: greenyellow; /* Primary color for hover effect */
+    background-color: #00CEC9; /* New teal accent color */
     position: absolute;
     transition: 0.3s;
 }
@@ -71,6 +71,7 @@ nav ul li a:hover::after {
     height: 450px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #00CEC9; /* Adding teal border to profile picture */
 }
 
 .header-text {
@@ -84,7 +85,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: greenyellow; /* Primary color for emphasis */
+    color: #00CEC9; /* Teal color for name highlight */
 }
 
 .action-items {
@@ -95,56 +96,56 @@ nav ul li a:hover::after {
 }
 
 .social-icon {
-    color: #aaa; /* Neutral color for icons */
+    color: #aaa; /* Starting with neutral color */
     font-size: 40px;
     text-decoration: none;
-    display: inline-flex; /* Change to inline-flex for better alignment */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto; /* Remove fixed width */
-    height: auto; /* Remove fixed height */
-    border: none; /* Remove the border */
-    border-radius: 0; /* Remove the circular shape */
-    transition: color 0.3s ease; /* Keep the hover effect */
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    transition: color 0.3s ease;
 }
 
-social-icon:hover {
-    color: greenyellow; /* Primary color for hover effect */
+.social-icon:hover {
+    color: #00CEC9; /* Teal color on hover */
 }
 
 button {
-    background-color: #aaa; /* Neutral button background */
-    color: #000; /* Dark text for contrast */
+    background-color: #333; /* Darker button background */
+    color: #EEEEEE; /* Light text for contrast */
     border: none;
     padding: 5px 10px;
     font-size: 15px;
     cursor: pointer;
     border-radius: 50px;
     margin-top: 0px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: greenyellow; /* Primary color for hover effect */
-    color: #000;
+    background-color: #00CEC9; /* Teal background on hover */
+    color: #000; /* Black text for contrast */
 }
 
 .download-cv {
-    background-color: #aaa;
-    color: #000;
-    border: 2px solid #aaa;
+    background-color: transparent;
+    color: #EEEEEE;
+    border: 2px solid #00CEC9;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .download-cv:hover {
-    background-color: greenyellow;
+    background-color: #00CEC9;
     color: #000;
-    border-color: greenyellow;
+    border-color: #00CEC9;
 }
 
 /* About Section */
@@ -165,9 +166,11 @@ button:hover {
 .grey-rectangle {
     width: 300px;
     height: 550px;
-    background-color: rgba(85, 80, 80, 0.5); /* Neutral grey for contrast */
+    background: linear-gradient(to bottom, #333333, #222222); /* Subtle gradient */
     border-radius: 10px;
     margin-top: 70px;
+    border: 1px solid #00CEC9; /* Thin teal border */
+    box-shadow: 0 5px 15px rgba(0, 206, 201, 0.1); /* Subtle teal glow */
 }
 
 .about-col-2 {
@@ -179,7 +182,7 @@ button:hover {
 
 .about-col-2 h2 {
     font-size: 28px;
-    color: greenyellow; /* Primary color for headings */
+    color: #00CEC9; /* Teal header color */
     margin-bottom: 15px;
 }
 
@@ -187,7 +190,7 @@ button:hover {
     text-align: justify;
     font-size: 16px;
     line-height: 1.6;
-    color: whitesmoke; /* Light text color for readability */
+    color: #EEEEEE; /* Softer off-white */
 }
 
 /* Tabs */
@@ -198,7 +201,7 @@ button:hover {
 
 .tab-links {
     margin-right: 50px;
-    color: whitesmoke; /* Light text color for tabs */
+    color: #EEEEEE; /* Softer off-white */
     cursor: pointer;
     font-weight: bold;
     position: relative;
@@ -210,7 +213,7 @@ button:hover {
     height: 3px;
     left: 0;
     bottom: -8px;
-    background-color: greenyellow; /* Primary color for active tab */
+    background-color: #00CEC9; /* Teal indicator */
     position: absolute;
     transition: 0.3s;
 }
@@ -225,7 +228,7 @@ button:hover {
 }
 
 .tab-contents ul li span {
-    color: greenyellow; /* Primary color for highlights */
+    color: #00CEC9; /* Teal highlights */
     font-size: 14px;
 }
 
@@ -245,9 +248,16 @@ button:hover {
 /* Contact Section */
 .contact-section {
     padding: 50px;
-    background-color: #000; /* Match the website's background */
-    color: whitesmoke; /* Light text color for readability */
-    margin-top: 150px; /* Add spacing above the contact section */
+    background-color: #000; /* Match website background */
+    color: #EEEEEE; /* Softer off-white */
+    margin-top: 150px;
+}
+
+.contact-heading {
+    text-align: left;
+    font-size: 32px;
+    color: #00CEC9; /* Teal heading */
+    margin-bottom: 30px;
 }
 
 .contact-box {
@@ -255,7 +265,7 @@ button:hover {
     justify-content: space-between;
     align-items: flex-start;
     gap: 50px;
-    flex-wrap: wrap; /* makes it responsive */
+    flex-wrap: wrap;
 }
 
 .contact-info {
@@ -265,13 +275,14 @@ button:hover {
 }
 
 .contact-info p {
-    color: whitesmoke; /* Light text color for contact details */
+    color: #EEEEEE; /* Softer off-white */
+    margin-bottom: 15px;
 }
 
 .contact-info ion-icon {
-    color: greenyellow; /* Set the icon color to greenyellow */
-    font-size: 20px; /* Optional: Adjust the size of the icons */
-    margin-right: 10px; /* Optional: Add spacing between the icon and text */
+    color: #00CEC9; /* Teal icon color */
+    font-size: 20px;
+    margin-right: 10px;
 }
 
 .contact-form {
@@ -286,34 +297,82 @@ button:hover {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #aaa; /* Neutral border color */
+    background-color: #111; /* Dark input background */
+    color: #EEEEEE; /* Light text color */
+    border: 1px solid #333; /* Darker border */
     border-radius: 6px;
     font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00CEC9; /* Teal border when focused */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 206, 201, 0.2); /* Subtle glow */
 }
 
 .contact-form button {
-    background-color: #aaa; /* Neutral button background */
-    color: #000; /* Dark text for contrast */
-    border: 2px solid #aaa; /* Match the border style */
-    padding: 8px 16px; /* Reduced padding to decrease the button size */
-    font-size: 14px; /* Font size for the button text */
-    border-radius: 0; /* Keep the square shape */
+    background-color: transparent;
+    color: #EEEEEE;
+    border: 2px solid #00CEC9;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px; /* Slightly rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     text-align: center;
-    width: auto; /* Ensure the button adjusts to its content */
-    max-width: 150px; /* Set a maximum width to limit the button size */
+    width: auto;
+    max-width: 150px;
 }
 
 .contact-form button:hover {
-    background-color: greenyellow; /* Primary color for hover effect */
+    background-color: #00CEC9;
     color: #000;
-    border-color: greenyellow; /* Match the hover effect */
+    border-color: #00CEC9;
 }
 
-.contact-heading {
-    text-align: left;
-    font-size: 32px;
-    color: white; /* Match the website's primary color */
-    margin-bottom: 30px; /* Add spacing below the heading */
+/* Add secondary color elements */
+.secondary-accent {
+    color: #6C5CE7; /* Secondary accent color */
+}
+
+/* Add some animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.header-text {
+    animation: fadeIn 1.5s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .profile-pic {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 300px;
+        height: 300px;
+        margin: 50px auto;
+    }
+    
+    .header-text {
+        margin-top: 10%;
+        text-align: center;
+    }
+    
+    .action-items {
+        justify-content: center;
+    }
+    
+    .contact-box {
+        flex-direction: column;
+    }
+    
+    .contact-info, .contact-form {
+        max-width: 100%;
+    }
 }

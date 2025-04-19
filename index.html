@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta author="Karthika Shankar" content="PORFOLIO">
-    <title>Portfolio</title>
+    <meta author="Karthika Shankar" content="PORTFOLIO">
+    <title>Karthika Shankar | Portfolio</title>
     <link rel="icon" href="top-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <img src="img/profilepic1.jpg" alt="Profile Picture" class="profile-pic">
@@ -27,7 +27,7 @@
                     <a class="social-icon" href="https://github.com/karthika-shankar" target="_blank">
                         <ion-icon name="logo-github"></ion-icon>
                     </a>
-                    <a class="social-icon" href="www.linkedin.com/in/karthika-shankar" target="_blank">
+                    <a class="social-icon" href="https://www.linkedin.com/in/karthika-shankar" target="_blank">
                         <ion-icon name="logo-linkedin"></ion-icon>
                     </a>
                     <a class="download-cv" href="https://drive.google.com/file/d/17C3cKjeJW8swAuoMuyEBurzLaGG8RTq7/view?usp=drive_link" target="_blank">Download CV</a>
@@ -41,7 +41,7 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <!-- Column 1: Grey Rectangle -->
+                <!-- Column 1: Styled Rectangle -->
                 <div class="about-col-1">
                     <div class="grey-rectangle"></div>
                 </div>
@@ -54,7 +54,7 @@
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab "id="skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Programming Languages</span><br>C C++ Java Python React</li>
                             <li><span>Databases</span><br>MySQL Supabase</li>
@@ -65,48 +65,47 @@
                         <ul>
                             <li><span>May 2024-Jun 2024</span><br>Techgentsia-AI/ML Intern<br>Contributed to AI/ML Team</li>
                             <li><span>Apr 2025-Present</span><br>Shadowfox-Web Development Intern<br>Developing and improving web applications using modern web technologies.</li>
-                            
                         </ul>
                     </div>
-                    <div class="tab-contents "id="education">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>School of Engineering,CUSAT</span><br>Nov 2022 - Jun 2026<br>B.Tech Computer Science Engineering GPA: 9.38</li>
+                            <li><span>School of Engineering, CUSAT</span><br>Nov 2022 - Jun 2026<br>B.Tech Computer Science Engineering GPA: 9.38</li>
                             <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education XII (CBSE): 90.6%</li>
-                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education X (CBSE):   97.8%</li>
+                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education X (CBSE): 97.8%</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section class="contact-section">
-        <h2 class="contact-heading">Contact Me</h2>
-        <div class="contact-box">
-            <div class="contact-info">
-                <p><ion-icon name="paper-plane-sharp"></ion-icon> karthikashankar@gmail.com</p>
-                
-                <p><ion-icon name="call"></ion-icon> +91 8921618050</p>
-                <p><ion-icon name="location"></ion-icon> Kochi, Kerala, India</p>
-                <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-                <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="contact-heading">Contact Me</h2>
+            <div class="contact-box">
+                <div class="contact-info">
+                    <p><ion-icon name="paper-plane-sharp"></ion-icon> karthikashankar@gmail.com</p>
+                    <p><ion-icon name="call"></ion-icon> +91 8921618050</p>
+                    <p><ion-icon name="location"></ion-icon> Kochi, Kerala, India</p>
+                </div>
+
+                <form class="contact-form">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-
-            <form class="contact-form">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
         </div>
     </section>
       
     <script>
+        // Tab functionality
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname) {
@@ -119,6 +118,16 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
