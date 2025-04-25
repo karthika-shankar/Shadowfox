@@ -151,41 +151,65 @@ nav ul li a:hover::after {
     transform: translateY(-5px);
 }
 
-/* About Section */
+/* Updated About Section */
 #about {
     padding: 80px 0;
     color: #ababab;
 }
 
-.row {
+.about-content {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.about-col-1 {
-    flex-basis: 35%;
+.about-text {
+    background: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 4px solid #00CEC9;
 }
 
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-.about-col-2 {
-    flex-basis: 60%;
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-tabs {
+    background: #1A1A1A;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .sub-title {
     font-size: 40px;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.sub-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #00CEC9;
+    left: 0;
+    bottom: -10px;
 }
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
+    margin: 0 0 30px;
+    border-bottom: 1px solid #262626;
+    padding-bottom: 10px;
 }
 
 .tab-links {
@@ -194,6 +218,8 @@ nav ul li a:hover::after {
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #fff;
+    padding-bottom: 5px;
 }
 
 .tab-links::after {
@@ -203,12 +229,12 @@ nav ul li a:hover::after {
     background: #00CEC9;
     position: absolute;
     left: 0;
-    bottom: -8px;
+    bottom: -1px;
     transition: 0.3s;
 }
 
 .tab-links.active-link::after {
-    width: 50%;
+    width: 100%;
 }
 
 .tab-contents {
@@ -217,17 +243,159 @@ nav ul li a:hover::after {
 
 .tab-contents.active-tab {
     display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .tab-contents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 15px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tab-contents ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: #00CEC9;
+    border-radius: 50%;
 }
 
 .tab-contents ul li span {
     color: #00CEC9;
     font-size: 16px;
     font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 0;
+    background-color: #080808;
+}
+
+.projects-heading {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #1A1A1A;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 206, 201, 0.2);
+}
+
+.project-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #ababab;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    background: #262626;
+    color: #00CEC9;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #00CEC9;
+    padding: 8px 15px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #00CEC9;
+    color: #000;
+}
+
+.project-btn ion-icon {
+    font-size: 16px;
 }
 
 /* Contact Section */
@@ -391,14 +559,6 @@ nav ul li a:hover::after {
         text-align: center;
     }
     
-    .about-col-1, .about-col-2 {
-        flex-basis: 100%;
-    }
-    
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
-    
     .tab-links {
         margin-right: 20px;
         font-size: 16px;
@@ -410,5 +570,21 @@ nav ul li a:hover::after {
     
     .contact-info {
         margin-bottom: 30px;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-card {
+        max-width: 100%;
+    }
+    
+    .project-links {
+        justify-content: center;
+    }
+    
+    .about-text, .about-tabs {
+        padding: 20px;
     }
 }

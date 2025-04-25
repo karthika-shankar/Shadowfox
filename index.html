@@ -16,6 +16,7 @@
                 <ul id="navMenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-icon" onclick="toggleMenu()">
@@ -42,50 +43,98 @@
     </div>
     
     <!-- About Section -->
-    <div id="about" class="reveal">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="img/about-img.jpg" alt="About Me">
+<div id="about" class="reveal">
+    <div class="container">
+        <h2 class="sub-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a Computer Science Engineering student passionate about technology and innovation. I'm currently focusing on web development, data science, and artificial intelligence. With a strong foundation in programming and problem-solving, I strive to create efficient and user-friendly solutions that make a positive impact.</p>
+                <p>I enjoy working on challenging projects that allow me to expand my skills and knowledge.</p>
+            </div>
+            
+            <div class="about-tabs">
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                    <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                    <p class="tab-links" onclick="opentab('contact', event)">Contact</p>
+                    <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
                 </div>
-                <div class="about-col-2">
-                    <h2 class="sub-title">About Me</h2>
-                    <p>I'm a Computer Science Engineering student passionate about technology and innovation. I'm currently focusing on web development, data science, and artificial intelligence.</p>
-                    
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
-                        <p class="tab-links" onclick="opentab('projects', event)">Projects</p>
+                
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML, CSS, JavaScript, React</li>
+                        <li><span>Programming Languages</span><br>Python, Java, C++</li>
+                        <li><span>Data Science</span><br>Machine Learning</li>
+                        <li><span>Tools & Technologies</span><br>Git</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-2026</span><br>B.Tech in Computer Science Engineering</li>
+                        <li><span>2020-2022</span><br>Higher Secondary Education</li>
+                        <li><span>2020</span><br>Secondary School Education</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>May2025 - Jun2025</span><br>AI/ML Intern at Techgentsia</li>
+                        <li><span>Apr 2025- Present</span><br>Web Development Intern at Shadowfox</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Projects Section -->
+<section id="projects" class="projects-section reveal">
+    <div class="container">
+        <h2 class="projects-heading">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/facerecimg.jpeg" alt="Data Analysis Project">
+                </div>
+                <div class="project-info">
+                    <h3>Face Recognition Project</h3>
+                    <p>A real-time face recognition project using Python, OpenCV, and Haar cascades for face detection.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>Pandas</span>
                     </div>
-                    
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, React</li>
-                            <li><span>Programming Languages</span><br>Python, Java, C++</li>
-                            <li><span>Data Science</span><br>Machine Learning, Data Analysis</li>
-                        </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/karthika-shankar/Face-Recognition.git" target="_blank" class="project-btn">
+                            <ion-icon name="logo-github"></ion-icon> View Code
+                        </a>
                     </div>
-                    
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2022-2026</span><br>B.Tech in Computer Science Engineering</li>
-                            <li><span>2020-2022</span><br>Higher Secondary Education</li>
-                            <li><span>2020</span><br>Secondary School Certificate</li>
-                        </ul>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="img/deepfakeimg.png" alt="E-commerce Website">
+                </div>
+                <div class="project-info">
+                    <h3>DeepShield</h3>
+                    <p>A Multi-Modal deepfake detection sysytem</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Python</span>
+                        <span>Flask</span>
                     </div>
-                    
-                    <div class="tab-contents" id="projects">
-                        <ul>
-                            <li><span>Personal Portfolio</span><br>A responsive personal portfolio website</li>
-                            <li><span>Data Analysis Project</span><br>Analysis of COVID-19 data using Python</li>
-                            <li><span>E-commerce Website</span><br>A full-stack e-commerce platform with payment integration</li>
-                        </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/karthika-shankar/ecommerce-platform" target="_blank" class="project-btn">
+                            <ion-icon name="logo-github"></ion-icon> View Code </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+</section>
     <!-- Contact Section -->
     <section id="contact" class="contact-section reveal">
         <div class="container">
@@ -113,6 +162,7 @@
             </div>
         </div>
     </section>
+    
     
     <!-- Footer -->
     <footer class="footer">
