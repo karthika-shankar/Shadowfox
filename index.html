@@ -13,72 +13,81 @@
     <div id="header">
         <div class="container">
             <nav>
-                <ul>
+                <ul id="navMenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
             </nav>
-            <img src="img/profilepic1.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="header-text">
-                <p>CSE Student</p>
-                <h1>Hi, I'm <span>Karthika Shankar</span></h1>
-                <div class="action-items">
-                    <a class="social-icon" href="https://github.com/karthika-shankar" target="_blank">
-                        <ion-icon name="logo-github"></ion-icon>
-                    </a>
-                    <a class="social-icon" href="https://www.linkedin.com/in/karthika-shankar" target="_blank">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
-                    <a class="download-cv" href="https://drive.google.com/file/d/17C3cKjeJW8swAuoMuyEBurzLaGG8RTq7/view?usp=drive_link" target="_blank">Download CV</a>
+            <div class="header-content">
+                <img src="img/profilepic1.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="header-text">
+                    <p>CSE Student</p>
+                    <h1>Hi, I'm <span>Karthika Shankar</span></h1>
+                    <div class="action-items">
+                        <a class="social-icon" href="https://github.com/karthika-shankar" target="_blank">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/karthika-shankar" target="_blank">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                        <a class="download-cv" href="https://drive.google.com/file/d/17C3cKjeJW8swAuoMuyEBurzLaGG8RTq7/view?usp=drive_link" target="_blank">Download CV</a>
+                    </div>
                 </div>
             </div>
-            
-            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </div>
     </div>
-    <div id="about">
+    
+    <!-- About Section -->
+    <div id="about" class="reveal">
         <div class="container">
             <div class="row">
-                <!-- Column 1: Styled Rectangle -->
                 <div class="about-col-1">
-                    <div class="grey-rectangle"></div>
+                    <img src="img/about-img.jpg" alt="About Me">
                 </div>
-                <!-- Column 2: About Me Section -->
                 <div class="about-col-2">
-                    <h2>About Me</h2>
-                    <p>A dedicated Computer Science Engineering student with a strong passion for software development, artificial intelligence, and emerging technologies. Focused on building efficient, user-centered solutions through a blend of technical knowledge and creative problem-solving. Eager to contribute to innovative projects, continuously learn new skills, and grow within dynamic, forward-thinking environments. Also interested in developing strong professional networks and communication skills to support collaborative success.</p>
+                    <h2 class="sub-title">About Me</h2>
+                    <p>I'm a Computer Science Engineering student passionate about technology and innovation. I'm currently focusing on web development, data science, and artificial intelligence.</p>
+                    
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        <p class="tab-links" onclick="opentab('projects', event)">Projects</p>
                     </div>
+                    
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Programming Languages</span><br>C C++ Java Python React</li>
-                            <li><span>Databases</span><br>MySQL Supabase</li>
-                            <li><span>Developer Tools</span><br>VS Code PyCharm</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript, React</li>
+                            <li><span>Programming Languages</span><br>Python, Java, C++</li>
+                            <li><span>Data Science</span><br>Machine Learning, Data Analysis</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>May 2024-Jun 2024</span><br>Techgentsia-AI/ML Intern<br>Contributed to AI/ML Team</li>
-                            <li><span>Apr 2025-Present</span><br>Shadowfox-Web Development Intern<br>Developing and improving web applications using modern web technologies.</li>
-                        </ul>
-                    </div>
+                    
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>School of Engineering, CUSAT</span><br>Nov 2022 - Jun 2026<br>B.Tech Computer Science Engineering GPA: 9.38</li>
-                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education XII (CBSE): 90.6%</li>
-                            <li><span>Mar Baselios Public School</span><br>Central Board of Secondary Education X (CBSE): 97.8%</li>
+                            <li><span>2022-2026</span><br>B.Tech in Computer Science Engineering</li>
+                            <li><span>2020-2022</span><br>Higher Secondary Education</li>
+                            <li><span>2020</span><br>Secondary School Certificate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Personal Portfolio</span><br>A responsive personal portfolio website</li>
+                            <li><span>Data Analysis Project</span><br>Analysis of COVID-19 data using Python</li>
+                            <li><span>E-commerce Website</span><br>A full-stack e-commerce platform with payment integration</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <section id="contact" class="contact-section">
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section reveal">
         <div class="container">
             <h2 class="contact-heading">Contact Me</h2>
             <div class="contact-box">
@@ -87,47 +96,34 @@
                     <p><ion-icon name="call"></ion-icon> +91 8921618050</p>
                     <p><ion-icon name="location"></ion-icon> Kochi, Kerala, India</p>
                 </div>
-
-                <form class="contact-form">
+                
+                <form id="contactForm" class="contact-form">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
-
+                    
                     <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" required>
-
+                    
                     <label for="message">Your Message</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
-
-                    <button type="submit">Submit</button>
+                    
+                    <button type="submit" id="submitBtn">Submit</button>
+                    <p id="formStatus" class="form-status"></p>
                 </form>
             </div>
         </div>
     </section>
-      
-    <script>
-        // Tab functionality
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-        // Smooth scrolling for navigation
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Karthika Shankar. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
